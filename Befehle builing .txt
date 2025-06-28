@@ -1,0 +1,3 @@
+Testen ob so okay: npx expo-doctor 
+Starten : npm run start
+Builden: eas build -p android --profile preview

@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "waehrungsrechner-app",
+    "name": "Waehrungsrechner-app",
     "slug": "waehrungsrechner-app",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "waehrungsrechnerapp",
+    "scheme": "waehrungsrechner-yapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -13,17 +13,17 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/kreisel.png",
+        "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
       "package": "com.anonymous.waehrungsrechnerapp"
     },
     "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.svg"
-    },
+    "bundler": "metro",
+    "output": "static",
+    "favicon": "./assets/images/kreisel.png"
+},
     "plugins": [
       "expo-router",
       [

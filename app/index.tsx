@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity, Image,Text, View, TextInput, StyleSheet } from "react-native";
+import { TouchableOpacity, Image, Text, View, TextInput, StyleSheet } from "react-native";
 import { Stack } from "expo-router";
 import { Picker } from '@react-native-picker/picker';
 
@@ -37,51 +37,47 @@ export default function WechselkursButton() {
   return (
     <View style={styles.layaut}>
     <Stack.Screen
-        options={{
-          
-          headerTitle: () => (
-            <View style={{ flexDirection: "row", alignItems: "center" }}>
-     
-      <Image
-        source={require("../assets/images/kreisel.png")}
-        style={{ marginRight: 25, width: 40, height: 40, resizeMode: "contain" }}
-      />
+      options={{
+       headerTitle: () => (
+          <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <Image
+              source={require("../assets/images/abrechnung.png")}
+              style={{ marginRight: 25, width: 40, height: 40, resizeMode: 'contain' }}
+          />
       <Text style={{ color: "#fff", fontSize: 20, fontWeight: "bold" }}>
           Währungsrechner
         </Text>
         </View>
-    ),
-         
+    ), 
           headerStyle: { backgroundColor: '#007BFF' },
           headerTintColor: "#fff",
-          headerTitleAlign: "center",
+          headerTitleAlign: "center"
         }}
-      />,
-    <View style={styles.container}>
-     
-
-     <View
-  style={{
-     borderStyle: 'solid',
+      />
+  <View style={styles.container}>
+    <View
+    style={{
+      borderStyle: 'solid',
       borderWidth: 1,
       borderColor: "#A9A9A9",
       borderRadius: 4,
       height: 45,
-      width: 250,
-      marginBottom: 10,
+      width: 200,
+      marginBottom: 5,
       justifyContent: "center",
-      backgroundColor: "#fff"
-    
-  }}
-> <Text style={{marginLeft: 35, marginBottom:-25, marginTop:5, fontWeight: "bold" }}>Währung auswählen</Text>
-  <Picker
-   
+      backgroundColor: "#fff",
+     
+    }}
+  > 
+    <Text style={styles.headline1} >Währung auswählen</Text>
+    <Picker
     selectedValue={selectedCurrency}
     style={{
-      height: 35,
-      width: 240,
-     
-      }}
+      display: 'flex',
+      width: 198,
+      marginTop: 21,
+      marginBottom: -23
+    }}
     onValueChange={(itemValue) => setSelectedCurrency(itemValue)}
   > 
     <Picker.Item label="Norwegische Krone" value="NOK" />
@@ -105,43 +101,44 @@ export default function WechselkursButton() {
          onChangeText={text => setBetrag(text.replace(",", "."))}
       />
     <TouchableOpacity
-  onPress={handleUmrechnen}
-  disabled={!kurs || !betrag}
-  style={{
+    onPress={handleUmrechnen}
+    disabled={!kurs || !betrag}
+    style={{
+   
     backgroundColor: (!kurs || !betrag) ? "#ccc" : "#007BFF",
     padding: 10,
+    width: 200,
     borderStyle: 'solid',
     borderWidth: 1,
-    borderColor: "#A9A9A9",
+    borderColor: "#A7A7A7",
     borderRadius: 4,
     marginTop: 10,
     alignItems: "center"
   }}
 >
   <Image
-    source={require("../assets/images/kreisel.png")} // Passe den Pfad zu deinem Bild an!
+    source={require("../assets/images/favicon-32x32.png")} // Passe den Pfad zu deinem Bild an!
     style={{ width: 32, height: 32, tintColor: "#fff" }}
   />
-</TouchableOpacity>
-      {euro !== "" && (
+  </TouchableOpacity>
+     
         <Text style={styles.resultText}>
-          {betrag} {selectedCurrency} = {euro} EUR
+          {euro} EUR
         </Text>
-      )}
+      
     </View>
     </View>
 
   );
 }
-
-const styles = StyleSheet.create({
+  const styles = StyleSheet.create({
     layaut:{
     flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'center'
   },
   container: {
-   
+
     justifyContent: "flex-start",
     alignItems: "center",
     padding: 25,
@@ -150,29 +147,43 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: "#bab5b5"
   },
-  
   input: {
     borderWidth: 1,
     borderColor: "#ccc",
     borderRadius: 4,
-    padding: 5,
+    padding: 6,
     width: 200,
     marginVertical: 10,
-    textAlign: "center"
+    marginTop: 20,
+    textAlign: "center",
+    backgroundColor: "#FFFFFF"
   },
   resultText: {
-    margin: 10,
+    marginTop: 20,
     fontSize: 16,
+    padding: 5,
+    borderRadius: 5,
+    width: 200,
+    backgroundColor: "#FFFFFF",
+    textAlign: "center"
   },
   headline:{
      fontWeight: "bold", 
      fontSize: 16, 
-     marginTop: 10 
+     marginTop: 10,
+     marginLeft: 15
+  },
+  headline1:{
+    marginLeft: 35,
+    marginTop: -25,
+    marginBottom: -15, 
+    fontWeight: "bold", 
+    width: 200 
   },
   taskItem: {
     fontSize: 16,
-    paddingVertical: 8,
-    paddingHorizontal: 12,
+    paddingVertical: 0,
+    paddingHorizontal: 15,
     color: "#333"
   }
 });

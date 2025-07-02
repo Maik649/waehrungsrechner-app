@@ -2,9 +2,9 @@
   "expo": {
     "name": "Waehrungsrechner-app",
     "slug": "waehrungsrechner-app",
-    "version": "1.0.1",
+    "version": "1.0.5",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/abrechnung.png",
     "scheme": "waehrungsrechner-yapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,7 +13,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/icon.png",
+        "foregroundImage": "./assets/images/abrechnung.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
@@ -22,14 +22,14 @@
     "web": {
     "bundler": "metro",
     "output": "static",
-    "favicon": "./assets/images/kreisel.png"
+    "favicon": "./assets/images/abrechnung.png"
 },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/kreisel.png",
+          "image": "./assets/images/abrechnung.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"

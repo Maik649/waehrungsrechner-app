@@ -1,50 +1,55 @@
-# Welcome to your Expo app 👋
+# Währungsrechner App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Eine einfache Expo React Native App zum Umrechnen von Währungen (NOK, USD, CAD) in Euro.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Auswahl verschiedener Währungen
+- Live-Wechselkurse (über freecurrencyapi.com)
+- Umrechnung in Euro
+- Modernes, responsives Design
+- Android- und Web-Support
 
+## Screenshots
+
+*(Hier kannst du Screenshots deiner App einfügen)*
+
+## Installation
+
+1. Repository klonen  
+   ```bash
+   git clone https://github.com/Maik649/waehrungsrechner-app.git
+   cd waehrungsrechner-app
+   ```
+
+2. Abhängigkeiten installieren  
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. App starten  
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Android APK bauen
 
 ```bash
-npm run reset-project
+eas build -p android --profile preview
 ```
+*(APK-Link findest du nach dem Build im Expo Dashboard)*
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Verwendete Technologien
 
-## Learn more
+- [Expo](https://expo.dev/)
+- [React Native](https://reactnative.dev/)
+- [freecurrencyapi.com](https://freecurrencyapi.com/)
+- [@react-native-picker/picker](https://github.com/react-native-picker/picker)
 
-To learn more about developing your project with Expo, look at the following resources:
+## Lizenz
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+MIT
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+**Passe die README an deine App und dein GitHub-Projekt an!**

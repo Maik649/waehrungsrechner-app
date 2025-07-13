@@ -52,4 +52,8 @@ MIT
 
 ---
 
+<<<<<<< HEAD
 **Passe die README an deine App und dein GitHub-Projekt an!**
+=======
+**Passe die README an deine App und dein GitHub-Projekt an!**
+>>>>>>> 16f41737522204adbc1581ad32e50281912116c0
